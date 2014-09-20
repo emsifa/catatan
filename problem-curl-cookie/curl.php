@@ -19,7 +19,7 @@ $url = baseurl('test.php');
 
 /**
  * =================================================
- * 3 SETS OF COOKIE VARIABLE THAT SHOULD YOU TEST
+ * 3 SETS OF COOKIE VARIABLE THAT YOU SHOULD TESTS
  * ================================================= */
 
 // 1) set of random cookie
@@ -28,11 +28,11 @@ $cookie_random = array('foo'=>'bar', 'baz'=>'qux');
 
 // 2) set of default session cookie
 // use it in cURL will cause cURL error timeout
-// because it's realcontain real PHPSESSID
+// because it's contain PHPSESSID
 $cookie_of_this_session = $_COOKIE;
 
 // 3) set of cookie that just contain PHPSESSID
-// use it will cause error timeout too..
+// use it also will cause error timeout
 $cookie_phpsessid = array();
 $cookie_phpsessid[session_name()] = session_id();
 
