@@ -68,8 +68,8 @@ Setelah nemu istilah ini, gw langsung googling dan dianterin ke [wikipedia](http
 
 Yap itu jawabannya, kenapa objek dibungkus di Closure. Buat di framework yang semua request tertuju ke index.php (alias nanganin request app via routing) ini berguna untuk menghemat resource. 
 Jadi misal dalam kasus slim tadi, gw punya rute `GET /foo` dan `GET /bar`, 
-dimana gw butuh objek `Foo` hanya di `/GET foo` tapi nggak di `GET /bar`, 
-gw tinggal inject objek `foo` via `Closure`, dan gw bisa pake `$app->foo` itu di aksi-aksi `/GET foo`, sedangkan
+dimana gw butuh objek `Foo` hanya di `GET /foo` tapi nggak di `GET /bar`, 
+gw tinggal inject objek `foo` via `Closure`, dan gw bisa pake `$app->foo` itu di aksi-aksi `GET /foo`, sedangkan
 di rute-rute yang nggak gunain `$app->foo`, objek `Foo` itu nggak di load.
 
 Jadi intinya **LOAD IT WHEN YOU NEED IT**
